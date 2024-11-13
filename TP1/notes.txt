@@ -1,0 +1,132 @@
+algorithme 1 (avec i allant de 1 à N-1) : 
+    si N = 0 ou N = 1 alors retourner false
+    pour i dans (2,N-1)
+        si i divise N retourner false
+    Fpour
+    retourner true
+
+    ------------------------
+    complixité au pire de cas : faire (N-1) itérations ==> O(N)
+    complixité au meuilleur cas : O(1)
+    --------------------------
+    les mesures pour les valeurs de test pour le premier algorithme : 
+    Algorithme 1 - Le nombre 1000003 est premier. Temps d'exécution: 0.039260 secondes
+
+    Algorithme 1 - Le nombre 2000003 est premier. Temps d'exécution: 0.071238 secondes
+
+    Algorithme 1 - Le nombre 4000037 est premier. Temps d'exécution: 0.062311 secondes
+
+    Algorithme 1 - Le nombre 8000009 est premier. Temps d'exécution: 0.110929 secondes
+
+    Algorithme 1 - Le nombre 16000057 est premier. Temps d'exécution: 0.205470 secondes
+
+    Algorithme 1 - Le nombre 32000011 est premier. Temps d'exécution: 0.407000 secondes
+
+    Algorithme 1 - Le nombre 64000031 est premier. Temps d'exécution: 0.881783 secondes
+
+    Algorithme 1 - Le nombre 128000003 est premier. Temps d'exécution: 1.602073 secondes
+
+    Algorithme 1 - Le nombre 256000001 est premier. Temps d'exécution: 3.208866 secondes
+
+    Algorithme 1 - Le nombre 512000009 est premier. Temps d'exécution: 6.257064 secondes
+
+    Algorithme 1 - Le nombre 10240000009 est non premier. Temps d'exécution: 0.000001 secondes
+
+    Algorithme 1 - Le nombre 2018000011 est non premier. Temps d'exécution: 0.000001 secondes
+    -------------------
+    Oui les mesures correspondent au meuilleur et au pire cas
+    ---------------------
+    Pour les nombres de plus en plus grands, le temps d'exécution suit une tendance linéaire, ce qui est cohérent avec la complexité O(N)
+    ---------------------
+    La complexité théorique O(N) est confirmée expérimentalement, surtout pour les grandes valeurs de N 
+
+
+
+-----------*******************-----------------************************
+algorithme 2 (avec i allant de 1 à N/2) : 
+    si N = 0 ou N = 1 alors retourner false
+    pour i dans (2,N/2)
+        si i divise N retourner false
+    Fpour
+    retourner true
+
+    ------------------------
+    complixité au pire de cas : faire (N/2) itérations ==> O(N)
+    complixité au meuilleur cas : O(1)
+    --------------------------
+    les mesures pour les valeurs de test pour le deuxieme algorithme : 
+    Algorithme 2 - Le nombre 1000003 est premier. Temps d'exécution: 0.020531 secondes
+
+    Algorithme 2 - Le nombre 2000003 est premier. Temps d'exécution: 0.018778 secondes
+
+    Algorithme 2 - Le nombre 4000037 est premier. Temps d'exécution: 0.029872 secondes
+
+    Algorithme 2 - Le nombre 8000009 est premier. Temps d'exécution: 0.058099 secondes
+
+    Algorithme 2 - Le nombre 16000057 est premier. Temps d'exécution: 0.114789 secondes
+
+    Algorithme 2 - Le nombre 32000011 est premier. Temps d'exécution: 0.217196 secondes
+
+    Algorithme 2 - Le nombre 64000031 est premier. Temps d'exécution: 0.418331 secondes
+
+    Algorithme 2 - Le nombre 128000003 est premier. Temps d'exécution: 0.806860 secondes
+
+    Algorithme 2 - Le nombre 256000001 est premier. Temps d'exécution: 1.651173 secondes
+
+    Algorithme 2 - Le nombre 512000009 est premier. Temps d'exécution: 3.226394 secondes
+
+    Algorithme 2 - Le nombre 10240000009 est non premier. Temps d'exécution: 0.000002 secondes
+
+    Algorithme 2 - Le nombre 2018000011 est non premier. Temps d'exécution: 0.000001 secondes
+    -------------------
+    Oui les mesures correspondent au meuilleur et au pire cas
+    ---------------------
+    Pour les nombres de plus en plus grands, le temps d'excution est beacoup mieux que le premier algorithme mais ça reste une complixité de O(N)
+    ---------------------
+    La complexité théorique O(N) est confirmée expérimentalement, surtout pour les grandes valeurs de N on a toujours de grandes mesures de temps 
+
+
+-----------*******************-----------------************************
+algorithme 2 (avec i allant de 1 à racine(N)) : 
+    si N = 0 ou N = 1 alors retourner false
+    pour i dans (2,racine(N))
+        si i divise N retourner false
+    Fpour
+    retourner true
+
+    ------------------------
+    complixité au pire de cas : faire racine(N) itérations ==> O(racine(N))
+    complixité au meuilleur cas : O(1)
+    --------------------------
+    les mesures pour les valeurs de test pour le deuxieme algorithme : 
+    Algorithme 3  - Le nombre 1000003 est premier. Temps d'exécution: 0.000050 secondes
+
+    Algorithme 3  - Le nombre 2000003 est premier. Temps d'exécution: 0.000033 secondes
+
+    Algorithme 3  - Le nombre 4000037 est premier. Temps d'exécution: 0.000039 secondes
+
+    Algorithme 3  - Le nombre 8000009 est premier. Temps d'exécution: 0.000049 secondes
+
+    Algorithme 3  - Le nombre 16000057 est premier. Temps d'exécution: 0.000067 secondes
+
+    Algorithme 3  - Le nombre 32000011 est premier. Temps d'exécution: 0.000091 secondes
+
+    Algorithme 3  - Le nombre 64000031 est premier. Temps d'exécution: 0.000146 secondes
+
+    Algorithme 3  - Le nombre 128000003 est premier. Temps d'exécution: 0.000210 secondes
+
+    Algorithme 3  - Le nombre 256000001 est premier. Temps d'exécution: 0.000301 secondes
+
+    Algorithme 3  - Le nombre 512000009 est premier. Temps d'exécution: 0.000341 secondes
+
+    Algorithme 3  - Le nombre 10240000009 est non premier. Temps d'exécution: 0.000001 secondes
+
+    Algorithme 3  - Le nombre 2018000011 est non premier. Temps d'exécution: 0.000001 secondes
+
+    -------------------
+    Oui les mesures correspondent au meuilleur et au pire cas //à verifier celui la 
+    ---------------------
+    Pour les nombres de plus en plus grands, le temps d'excution est beacoup mieux que le premier algorithme mais ça reste une complixité de O(racine(N))
+    ---------------------
+    La complexité théorique O(racine(N)) est confirmée expérimentalement, surtout pour les grandes valeurs de N on a toujours de grandes mesures de temps 
+    
