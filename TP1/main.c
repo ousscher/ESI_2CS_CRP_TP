@@ -124,7 +124,14 @@ int main() {
 
         long long am = (temps_execution1 - temps_execution3) / temps_execution1 * 100; 
 
-        printf("| %11lld |    %s    | %9f | %9f | %9f |    %4lld%%     |\n", valeurs[i], resultat3 ? "Y" : "N", temps_execution1, temps_execution2, temps_execution3, am); 
+        if (resultat3) {
+            printf("| %11lld |    %s    | %9f | %9f | %9f |    %4lld%%     |\n",
+                valeurs[i], "Y", temps_execution1, temps_execution2, temps_execution3, am);
+        } else {
+            printf("| %11lld |    %s    | %9f | %9f | %9f |      ---     |\n",
+                valeurs[i], "N", temps_execution1, temps_execution2, temps_execution3);
+        }
+
         
         // Enregistrement des résultats avec les détails dans le fichier CSV
         fprintf(f, "%lld,%s,%f,%f,%f,%lld%%\n", valeurs[i], resultat3 ? "Y" : "N", temps_execution1, temps_execution2, temps_execution3, am);
